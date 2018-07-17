@@ -1,0 +1,14 @@
+{
+  "name": "monorepo-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/francoisgeorgy/monorepo-example.git",
+  "author": "François Georgy <francois.georgy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
