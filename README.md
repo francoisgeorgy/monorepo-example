@@ -13,6 +13,10 @@ For this example we will create 3 packages:
 # resources
 
 - https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/
+    - https://yarnpkg.com/lang/en/docs/workspaces/
+    - https://yarnpkg.com/blog/2018/02/15/nohoist/
+- https://github.com/francoisgeorgy/cra-monorepo-examples
+- https://medium.com/trabe/monorepo-setup-with-lerna-and-yarn-workspaces-5d747d7c0e91
 
 # commands
     
@@ -28,19 +32,14 @@ Tell Lerna to use yarn and yarn workspace by adding the following in `lerna.json
     "npmClient": "yarn",
     "useWorkspaces": true
     
-Add the following in `package.json`:    
+Add the following in root `package.json`:    
     
-    "workspaces": [ "packages/*" ]
-
-maybe better:
-
     "workspaces": {
-        "packages": [
-            "packages/*"
+        "packages": [ 
+            "packages/*" 
         ],
         "nohoist": [
-            "**/react-scripts",
-            "**/react-scripts/**"
+            "**/react-native", 
+            "**/react-native/**"
         ]
-    },
-    
+    }
