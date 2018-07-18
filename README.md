@@ -43,3 +43,17 @@ Add the following in root `package.json`:
             "**/react-native/**"
         ]
     }
+
+# packages
+
+    cd /tmp
+    mkdir cra
+    cd cra
+    create-react-app app
+    rm -rf app/node_modules
+    mv app <here>
+    cd monorepo-example
+    yarn
+    
+    
+    
